@@ -1,0 +1,12 @@
+,Course_code,Courese_title,Category,Faculty_name,Slot,Room_no,Hours,Absent,Percent
+0,15IT303JRegular,Computer Networks,Theory,Ms. Revathi.M (102074),A,TP 704,22,5,77.27
+1,15CS301Regular,Theory Of Computation,Theory,Ms.P.Saranya (101264),B,TP 905,22,6,72.73
+2,15MA302Regular,Discrete Mathematics,Theory,Ms.P.Umamaheswari (101182),C,TP 706,28,5,82.14
+3,15IT302JRegular,Database Management Systems,Theory,Mrs.P.Visalakshi (100480),D,TP 703,17,1,94.12
+4,15IT423ERegular,Data Science & Big Data Analytics,Theory,Dr.Saad Yunus Sait (102221),E,TP 801,26,5,80.77
+5,15PD309Regular,Aptitude - IV (Foundation),Theory,Mr. S. Yuvaraj (102546),F,TP 1302,12,0,100.00
+6,15CS324ERegular,Machine Learning,Theory,Ms.C.Sindhu (101699),G,TP 805,23,5,78.26
+7,15IT302JRegular,Database Management Systems,Practical,Mrs.P.Visalakshi (100480),LAB,Computing Lab (B) - TP811,14,2,85.71
+8,15CS390LRegular,Industrial Training - I,Practical,Mr. M.V.Ranjith Kumar (102257),LAB,UB1112,7,2,71.43
+9,15CS385LRegular,Moocs I,Practical,Mrs.D.VIJI (102077),LAB,TP708A,7,1,85.71
+10,15IT303JRegular,Computer Networks,Practical,Ms. Revathi.M (102074),LAB,Computing Lab (B) - TP811,14,2,85.71

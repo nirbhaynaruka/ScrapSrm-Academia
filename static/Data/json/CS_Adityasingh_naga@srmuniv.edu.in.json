@@ -1,0 +1,123 @@
+[
+    {
+        "Course_code": "15CS302JRegular",
+        "Course_title": "Operating Systems",
+        "Category": "Theory",
+        "Faculty_name": "Ms.S.S.Saranya (101688)",
+        "Slot": "A",
+        "Room_no": "TP 605",
+        "Hours": "22",
+        "Absent": "2",
+        "Percent": "90.91"
+    },
+    {
+        "Course_code": "15CS301Regular",
+        "Course_title": "Theory Of Computation",
+        "Category": "Theory",
+        "Faculty_name": "Mrs.S.Sharanya (101945)",
+        "Slot": "B",
+        "Room_no": "TP 802",
+        "Hours": "29",
+        "Absent": "4",
+        "Percent": "86.21"
+    },
+    {
+        "Course_code": "15MA302Regular",
+        "Course_title": "Discrete Mathematics",
+        "Category": "Theory",
+        "Faculty_name": "Mrs.V.Visalakshi (102114)",
+        "Slot": "C",
+        "Room_no": "TP 602",
+        "Hours": "28",
+        "Absent": "5",
+        "Percent": "82.14"
+    },
+    {
+        "Course_code": "15IT302JRegular",
+        "Course_title": "Database Management Systems",
+        "Category": "Theory",
+        "Faculty_name": "Mrs.P.Visalakshi (100480)",
+        "Slot": "D",
+        "Room_no": "TP 703",
+        "Hours": "17",
+        "Absent": "2",
+        "Percent": "88.24"
+    },
+    {
+        "Course_code": "15IT322ERegular",
+        "Course_title": "Python Programming",
+        "Category": "Theory",
+        "Faculty_name": "Ms.D.Aishwarya (102514)",
+        "Slot": "E",
+        "Room_no": "TP 1106",
+        "Hours": "24",
+        "Absent": "3",
+        "Percent": "87.50"
+    },
+    {
+        "Course_code": "15PD309Regular",
+        "Course_title": "Aptitude - IV (Foundation)",
+        "Category": "Theory",
+        "Faculty_name": "Mr. S. Yuvaraj (102546)",
+        "Slot": "F",
+        "Room_no": "TP 1302",
+        "Hours": "12",
+        "Absent": "3",
+        "Percent": "75.00"
+    },
+    {
+        "Course_code": "NOC19CS53Full Mooc",
+        "Course_title": "Introduction to Machine Learning (IITM)",
+        "Category": "Theory",
+        "Faculty_name": "Ms.A.Jackulin Mahariba (101370)",
+        "Slot": "G",
+        "Room_no": "null",
+        "Hours": "0",
+        "Absent": "0",
+        "Percent": "0.00"
+    },
+    {
+        "Course_code": "15IT302JRegular",
+        "Course_title": "Database Management Systems",
+        "Category": "Practical",
+        "Faculty_name": "Mrs.P.Visalakshi (100480)",
+        "Slot": "LAB",
+        "Room_no": "Computing Lab (B) - TP811",
+        "Hours": "14",
+        "Absent": "2",
+        "Percent": "85.71"
+    },
+    {
+        "Course_code": "15CS390LRegular",
+        "Course_title": "Industrial Training - I",
+        "Category": "Practical",
+        "Faculty_name": "Mr. M.V.Ranjith Kumar (102257)",
+        "Slot": "LAB",
+        "Room_no": "UB1112",
+        "Hours": "7",
+        "Absent": "1",
+        "Percent": "85.71"
+    },
+    {
+        "Course_code": "15CS375LRegular",
+        "Course_title": "Minor Project I",
+        "Category": "Practical",
+        "Faculty_name": "Mr. M.V.Ranjith Kumar (102257)",
+        "Slot": "LAB",
+        "Room_no": "UB1112",
+        "Hours": "6",
+        "Absent": "1",
+        "Percent": "83.33"
+    },
+    {
+        "Course_code": "15CS302JRegular",
+        "Course_title": "Operating Systems",
+        "Category": "Practical",
+        "Faculty_name": "Ms.S.S.Saranya (101688)",
+        "Slot": "LAB",
+        "Room_no": "Computing Lab (M) \u2013 TP016",
+        "Hours": "12",
+        "Absent": "0",
+        "Percent": "100.00"
+    }
+]

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+    <link rel="stylesheet" href="login.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+
+    <title>LogIn </title>
+    <script>
+        function sendData() {
+            $.get("getData", $("#loginform").serialize(), function () {});
+        }
+    </script>
+
+</head>
+
+<body>
+    <header style="height: 80px">
+
+    </header>
+
+    <section class="container">
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <div class="loginform"
+                    style="border-radius:16px;background-color: ghostwhite;border: 2px solid lightgrey;">
+                    <form id="loginform" name="loginform" method="POST" , action='/getData'>
+                        <div class="input" style="text-align: center;"></div>
+                        <h3>Log Into Academia </h3>
+                        <p>or <a href="#">Create Account</a></p>
+                </div>
+                <div class="form" style="text-align: center;">
+                    <div class="input">
+                        <!-- <p>Email - address</p> -->
+                        <input type="email" placeholder="XYZ@srmuniv.edu.in" name="Email" id="Email" required=""
+                            autofocus="">
+                        <!-- <span id="emailErr" class="errormsg" style="display: block;">Enter Valid SRM Email Address</span> -->
+                        <hr style="width: 50%;">
+
+                    </div>
+                    <div class="input">
+                        <!-- <p>Password</p> -->
+                        <input type="password" placeholder="Password" name="Password" id="Password" required="">
+                        <!-- <span id="passwordErr" class="errormsg" style="display:none">Enter Valid Password.</span> -->
+                        <hr style="width: 50%;">
+                    </div>
+
+                    <div class="input">
+                        <button class="btn" style="background-color: darkgrey;" type="submit"
+                            value="Log-In">Log-In</button>
+                    </div>
+                </div>
+                </form>
+
+            </div>
+        </div>
+        <div class="col-md-3"></div>
+        </div>
+    </section>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <!-- <script src="https://www.gstatic.com/firebasejs/6.4.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.4.0/firebase-database.js"></script> -->
+    <!-- <script src="https://www.gstatic.com/firebasejs/6.4.0/init.js"></script> -->
+
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#reserved-urls -->
+
+    <!-- Initialize Firebase -->
+    <!-- <script src="login.js"></script> -->
+
+</body>
+
+</html>

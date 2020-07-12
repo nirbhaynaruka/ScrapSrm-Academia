@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    
+    <!-- <script type="text/javascript" src="./lib/jquery-3.3.1.min.js"></script> -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../static/additional_files/css/index.css">
+    <title>Time Table</title>
+</head>
+<script>
+    function insert1() {
+        $.ajax({
+            url: "../static/Data/json/CS_{{data}}.json",
+            dataType: "json",
+            async: true,
+            success: function (data) {
+                $(data).each(function (index, value) {
+                    if (value.Slot == "A") {
+                        var rec = value.Course_title + "<br>" + "<hr>" + value.Room_no + "<br>" +
+                            "<hr>" + value.Faculty_name;
+                        $("#a1").append(rec);
+                        $("#a2").append(rec);
+                        $("#a3").append(rec);
+                        $("#a21").append(rec);
+                        $("#a22").append(rec);
+                        $("#a23").append(rec);
+                        index++;
+                    }
+                    if (value.Slot == "B") {
+                        var rec = value.Course_title + "<br>" + "<hr>" + value.Room_no + "<br>" +
+                            "<hr>" + value.Faculty_name;
+                        $("#b1").append(rec);
+                        $("#b2").append(rec);
+                        $("#b3").append(rec);
+                        $("#b21").append(rec);
+                        $("#b22").append(rec);
+                        $("#b23").append(rec);
+
+
+                    }
+                    if (value.Slot == "C") {
+                        var rec = value.Course_title + "<br>" + "<hr>" + value.Room_no + "<br>" +
+                            "<hr>" + value.Faculty_name;
+                        $("#c1").append(rec);
+                        $("#c2").append(rec);
+                        $("#c3").append(rec);
+                        $("#c21").append(rec);
+                        $("#c22").append(rec);
+                        $("#c23").append(rec);
+
+                    }
+                    if (value.Slot == "D") {
+                        var rec = value.Course_title + "<hr>" + value.Room_no +
+                            "<hr>" + value.Faculty_name;
+                        $("#d1").append(rec);
+                        $("#d2").append(rec);
+                        $("#d3").append(rec);
+                        $("#d21").append(rec);
+                        $("#d22").append(rec);
+                        $("#d23").append(rec);
+
+                    }
+                    if (value.Slot == "E") {
+                        var rec = value.Course_title + "<br>" + "<hr>" + value.Room_no + "<br>" +
+                            "<hr>" + value.Faculty_name;
+                        $("#e1").append(rec);
+                        $("#e2").append(rec);
+                        $("#e3").append(rec);
+                        $("#e21").append(rec);
+                        $("#e22").append(rec);
+                        $("#e23").append(rec);
+
+                    }
+                    if (value.Slot == "F") {
+                        var rec = value.Course_title + "<br>" + "<hr>" + value.Room_no + "<br>" +
+                            "<hr>" + value.Faculty_name;
+                        $("#f1").append(rec);
+                        $("#f2").append(rec);
+                        $("#f3").append(rec);
+                        $("#f21").append(rec);
+                        $("#f22").append(rec);
+                        $("#f23").append(rec);
+
+                    }
+                    if (value.Slot == "G") {
+                        var rec = value.Course_title + "<br>" + "<hr>" + value.Room_no + "<br>" +
+                            "<hr>" + value.Faculty_name;
+                        $("#g1").append(rec);
+                        $("#g2").append(rec);
+                        $("#g3").append(rec);
+                        $("#g21").append(rec);
+                        $("#g22").append(rec);
+                        $("#g23").append(rec);
+
+                    }
+                });
+            }
+
+        });
+
+        insert();
+    }
+</script>
+
+<body onload="insert1()">
+    <header class="header" id="myHeader" style="z-index: 10;">
+
+        <div class="header">
+            <a href="#default" class="logo">Some Name</a>
+            <div class="header-right">
+                <a id="timetablebutton" href="#">TimeTable</a>
+                <a id="attendancebutton" href="#">Attendance</a>
+                <a href="#">Extra</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="timetable">
+
+        <div class="container-fluid ">
+            <div>
+                <p id="dayorder"></p>
+            </div>
+            <div class="batch-1">
+
+
+                <table id="tableA" align="center" border="5" cellpadding="5" cellspacing="3">
+                    <h4 class="t1" style="text-align: center; position: relative; margin: 50px; color: rgb(79, 77, 77)">
+                        <strong style="z-index: 1;">Time Table for B.Tech / M.Tech - Batch 1</strong></h4>
+                    <tbody>
+                        <tr>
+                            <td style="background-color:gainsboro">FROM</td>
+                            <td rowspan="2" style="background-color:gainsboro">08:00 - 08:50</td>
+                            <td rowspan="2" style="background-color:gainsboro">08:50 - 09:40</td>
+                            <td rowspan="2" style="background-color:gainsboro">09:45 - 10:35</td>
+                            <td rowspan="2" style="background-color:gainsboro">10:40 - 11:30</td>
+                            <td rowspan="2" style="background-color:gainsboro">11:35 - 12:25</td>
+                            <td rowspan="2" style="background-color:gainsboro">12:30 - 01:20</td>
+                            <td rowspan="2" style="background-color:gainsboro">01:25 - 02:15</td>
+                            <td rowspan="2" style="background-color:gainsboro">02:20 - 03:10</td>
+                            <td rowspan="2" style="background-color:gainsboro">03:15 - 04:05</td>
+                            <td rowspan="2" style="background-color:gainsboro">04:05 - 04:55</td>
+                        </tr>
+                        <tr>
+                            <td style="background-color:gainsboro">TO</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Hour/Day Order</strong></td>
+                            <td><strong>1</strong></td>
+                            <td><strong>2</strong></td>
+                            <td><strong>3</strong></td>
+                            <td><strong>4</strong></td>
+                            <td><strong>5</strong></td>
+                            <td><strong>6</strong></td>
+                            <td><strong>7</strong></td>
+                            <td><strong>8</strong></td>
+                            <td><strong>9</strong></td>
+                            <td><strong>10</strong></td>
+                        </tr>
+                        <tr>
+                            <td rowspan="3">Day 1</td>
+                            <td id="a1" colspan="2" style="background-color:LightBlue"></td>
+                            <td id="f1" colspan="2" style="background-color:LightBlue"></td>
+                            <td id="d1" style="background-color:LightBlue"></td>
+                            <td style="background-color:LightGreen">P6</td>
+                            <td id="lab78" colspan="2" style="background-color:LightGreen"></td>
+                            <td id="lab910" colspan="2" style="background-color:LightGreen"></td>
+
+                        </tr>
+                        <tr>
+
+                        </tr>
+                        <tr>
+
+                        </tr>
+                        <tr>
+                            <td rowspan="3">Day 2</td>
+                            <td id="lab1112" colspan="2" style="background-color:LightGreen"></td>
+                            <td id="lab1314" colspan="2" style="background-color:LightGreen"></td>
+
+                            <td style="background-color:LightGreen">P15</td>
+                            <td id="b1" colspan="2" style="background-color:LightBlue"></td>
+                            <td id="g1" colspan="2" style="background-color:LightBlue"></td>
+                            <td id="a2" style="background-color:LightBlue"></td>
+                        </tr>
+                        <tr>
+
+                        </tr>
+                        <tr>
+
+                        </tr>
+                        <tr>
+                            <td rowspan="3">Day 3</td>
+                            <td id="c1" colspan="2" style="background-color:LightBlue"></td>
+                            <td id="e1" style="background-color:LightBlue"></td>
+                            <td id="f2" style="background-color:LightBlue"></td>
+                            <td id="d2" style="background-color:LightBlue"></td>
+                            <td style="background-color:LightGreen">P26</td>
+                            <td id="lab2728" colspan="2" style="background-color:LightGreen"></td>
+                            <td id="lab2930" colspan="2" style="background-color:LightGreen"></td>
+                        </tr>
+                        <tr>
+
+                        </tr>
+                        <tr>
+
+                        </tr>
+                        <tr>
+                            <td rowspan="3">Day 4</td>
+                            <td id="lab3132" colspan="2" style="background-color:LightGreen"></td>
+                            <td id="lab3334" colspan="2" style="background-color:LightGreen"></td>
+
+                            <td style="background-color:LightGreen">P35</td>
+                            <td id="d3" colspan="2" style="background-color:LightBlue;"></td>
+                            <td id="b2" style="background-color:LightBlue;"></td>
+                            <td id="c2" style="background-color:LightBlue;"></td>
+                            <td id="g2" style="background-color:LightBlue;"></td>
+                        </tr>
+                        <tr>
+
+                        </tr>
+                        <tr>
+
+                        </tr>
+                        <tr>
+                            <td rowspan="3">Day 5</td>
+                            <td id="e2" colspan="2" style="background-color:LightBlue"></td>
+                            <td id="a3" style="background-color:LightBlue"></td>
+                            <td id="b3" style="background-color:LightBlue"></td>
+                            <td id="c3" style="background-color:LightBlue"></td>
+                            <td style="background-color:LightGreen">P46</td>
+                            <td id="lab4748" colspan="2" style="background-color:LightGreen"></td>
+                            <td id="lab4950" colspan="2" style="background-color:LightGreen"></td>
+                        </tr>
+                        <tr>
+
+                        </tr>
+                        <tr>
+
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+            <div class="batch-2">
+
+                <table id="tableB" align="center" border="5" cellpadding="5" cellspacing="2">
+                    <h4 class="t1" style="text-align: center; position: relative; margin: 50px; color: rgb(79, 77, 77)">
+                        <strong>Time Table for B.Tech / M.Tech - Batch 2</strong></h4>
+                    <tbody>
+                        <tr>
+                            <td style="background-color:gainsboro">FROM</td>
+                            <td rowspan="2" style="background-color:gainsboro">08:00 - 08:50</td>
+                            <td rowspan="2" style="background-color:gainsboro">08:50 - 09:40</td>
+                            <td rowspan="2" style="background-color:gainsboro">09:45 - 10:35</td>
+                            <td rowspan="2" style="background-color:gainsboro">10:40 - 11:30</td>
+                            <td rowspan="2" style="background-color:gainsboro">11:35 - 12:25</td>
+                            <td rowspan="2" style="background-color:gainsboro">12:30 - 01:20</td>
+                            <td rowspan="2" style="background-color:gainsboro">01:25 - 02:15</td>
+                            <td rowspan="2" style="background-color:gainsboro">02:20 - 03:10</td>
+                            <td rowspan="2" style="background-color:gainsboro">03:15 - 04:05</td>
+                            <td rowspan="2" style="background-color:gainsboro">04:05 - 04:55</td>
+                        </tr>
+                        <tr>
+                            <td style="background-color:gainsboro">TO</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Hour/Day Order</strong></td>
+                            <td><strong>1</strong></td>
+                            <td><strong>2</strong></td>
+                            <td><strong>3</strong></td>
+                            <td><strong>4</strong></td>
+                            <td><strong>5</strong></td>
+                            <td><strong>6</strong></td>
+                            <td><strong>7</strong></td>
+                            <td><strong>8</strong></td>
+                            <td><strong>9</strong></td>
+                            <td><strong>10</strong></td>
+                        </tr>
+                        <tr>
+                            <td>Day 1</td>
+                            <td id="lab12" colspan="2" style="background-color:LightGreen">
+                            </td>
+                            <td id="lab34" colspan="2" style="background-color:LightGreen">
+                            </td>
+                            <td style="background-color:LightGreen">P5
+                            </td>
+
+                            <td id="a21" colspan="2" style="background-color:LightBlue">
+                            </td>
+                            <td id="f21" colspan="2" style="background-color:LightBlue">
+                            </td>
+
+                            <td id="d21" style="background-color:LightBlue">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Day 2</td>
+                            <td id="b21" colspan="2" style="background-color:LightBlue"></td>
+                            <td id="g21" colspan="2" style="background-color:LightBlue"></td>
+                            <td id="a22" style="background-color:LightBlue"></td>
+                            <td style="background-color:LightGreen">P16
+                            </td>
+                            <td id="lab1718" colspan="2" style="background-color:LightGreen">
+                            </td>
+                            <td id="lab1920" colspan="2" style="background-color:LightGreen">
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td>Day 3</td>
+                            <td id="lab2122" colspan="2" style="background-color:LightGreen">P21
+                            </td>
+                            <td id="lab2324" colspan="2" style="background-color:LightGreen">P22
+                            </td>
+                            <td style="background-color:LightGreen">P25
+                            </td>
+
+                            <td id="c21" colspan="2" style="background-color:LightBlue">C
+                            </td>
+                            <td id="e22" style="background-color:LightBlue">E
+                            </td>
+                            <td id="f23" style="background-color:LightBlue">F
+                            </td>
+                            <td id="d22" style="background-color:LightBlue">D
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Day 4</td>
+                            <td id="d23" colspan="2" style="background-color:LightBlue">
+                            </td>
+                            <td id="b22" style="background-color:LightBlue">
+                            </td>
+                            <td id="c22" style="background-color:LightBlue">
+                            </td>
+                            <td id="g23" style="background-color:LightBlue">
+                            </td>
+                            <td style="background-color:LightGreen">P36
+                            </td>
+                            <td id="lab3738" colspan="2" style="background-color:LightGreen">
+                            </td>
+                            <td id="lab3940" colspan="2" style="background-color:LightGreen">
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td>Day 5</td>
+                            <td id="lab4142" colspan="2" style="background-color:LightGreen">
+                            </td>
+                            <td id="lab4344" colspan="2" style="background-color:LightGreen">
+                            </td>
+                            <td style="background-color:LightGreen">P45
+                            </td>
+
+                            <td id="e23" colspan="2" style="background-color:LightBlue">
+                            </td>
+                            <td id="a23" style="background-color:LightBlue">
+                            </td>
+                            <td id="b23" style="background-color:LightBlue">
+                            </td>
+                            <td id="c23" style="background-color:LightBlue">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+    <section id="attendance" class="container" >
+        <div>
+            <h1 style="text-align: center;">Attendance</h1>
+            <hr style="width:20%;color: black;">
+
+        </div>
+        <div class="row" style="text-align: center;padding-top: 3%;">
+
+            <div class="col-md-6 col-sm-6" style="background-color:#f1c40f;height: 140px;">
+                <div style="padding-top:0%;color: white;">
+                    <h4 id="aa1"></h4>
+                    <h4 id="aa2">Absent : </h4>
+                    <h4 id="aa3">Classes : </h4>
+                </div>
+
+
+            </div>
+            <div class="col-md-1 col-sm-1" style="margin: 0 -78px 0 0;"></div>
+            <div class="col-md-5 col-sm-5" style="background-color:#74b9ff;height: 140px;">
+                <div style="padding-top:0%;color: white;">
+                    <h4 id="ab1"></h4>
+                    <h4 id="ab2">Absent : </h4>
+                    <h4 id="ab3">Classes : </h4>
+                </div>
+
+            </div>
+        </div>
+        <div class="row" style="text-align: center;padding-top: 1%;height: 140px;">
+
+            <div class="col-md-7 col-sm-7" style="background-color:#e17055;height: 140px;">
+                <div style="padding-top:0%;color: white;">
+                    <h4 id="ac1"></h4>
+                    <h4 id="ac2">Absent : </h4>
+                    <h4 id="ac3">Classes : </h4>
+                </div>
+
+
+            </div>
+            <div class="col-md-1 col-sm-1" style="margin: 0 -78px 0 0;"></div>
+
+            <div class="col-md-4 col-sm-4" style="background-color:#535c68;height: 140px;">
+                <div style="padding-top:0%;color: white;">
+                    <h4 id="ad1"></h4>
+                    <h4 id="ad2">Absent : </h4>
+                    <h4 id="ad3">Classes : </h4>
+                </div>
+
+
+            </div>
+        </div>
+        <div class="row" style="text-align: center;padding-top: 2%;padding-bottom:12.5%;height: 125px;">
+
+            <div class="col-md-5 col-sm-5" style="background-color:#b2bec3;">
+                <div style="padding-top:0%;color: white;">
+                    <h4 id="ae1"></h4>
+                    <h4 id="ae2">Absent : </h4>
+                    <h4 id="ae3">Classes : </h4>
+                </div>
+
+
+            </div>
+            <div class="col-md-1 col-sm-1" style="margin: 0 -78px 0 0;"></div>
+
+            <div class="col-md-6 col-sm-6" style="background-color:#00cec9;height: 125px;">
+                <div style="padding-top:0%;color: white;">
+                    <h4 id="af1"></h4>
+                    <h4 id="af2">Absent : </h4>
+                    <h4 id="af3">Classes : </h4>
+                </div>
+
+
+            </div>
+
+            <div class="d1" style="text-align: center;background-color:#686de0;	height: 125px;width: 1062px;margin-top:14px;">
+
+                <div style="padding-top:0%;color: white;">
+                    <h4 id="ag1"></h4>
+                    <h4 id="ag2">Absent : </h4>
+                    <h4 id="ag3">Classes : </h4>
+                </div>
+
+
+            </div>
+
+    </section>
+    <!-- <script src="data.js"> -->
+    <script>
+        function insert() {
+            $.ajax({
+                url: "../static/Data/json/TT_{{data}}.json",
+                dataType: "json",
+                success: function (data) {
+                    $(data).each(function (index, value) {
+                        var count = 0,
+                            i, h, a;
+                        h = parseInt(value.Hours);
+                        a = parseInt(value.Absent);
+                        for (i = 0; i < 10; i++) {
+                            if ((h + 1) - (a + 1) * 4 >= 0) {
+                                count++;
+                                h++;
+                                a++;
+                            }
+                        }
+                        var lab1 = value.Course_title + "<br>" + "<hr>" + value.Room_no + "<br>" +
+                            "<hr>" + value.Faculty_name;
+                        var rec = value.Course_title + " ( " + value.Percent + " %) ";
+                        var rec1 = value.Absent + " out of " + value.Hours;
+                        var rec3 = value.Absent * 4 - value.Hours + " you need to attend";
+                        var count = count + " you can miss";
+                        if (value.Slot == "P1-P2-") {
+                            $("#lab12").append(lab1);
+                            $("#lab12rec").append(rec);
+                            $("#lab12rec1").append(rec1);
+                            if (parseInt(value.Percent) >= 75)
+                                $("#lab12count").append(count);
+                            else
+                                $("#lab12count").append(rec3);
+                        }
+                        if (value.Slot == "P3-P4-") {
+                            $("#lab34").append(lab1);
+                            $("#lab34rec").append(rec);
+                            $("#lab34rec1").append(rec1);
+                            if (parseInt(value.Percent) >= 75)
+                                $("#lab34count").append(count);
+                            else
+                                $("#lab34count").append(rec3);
+                        }
+                        if (value.Slot == "P17-P18-") {
+                            $("#lab1718").append(lab1);
+                            $("#lab1718rec").append(rec);
+                            $("#lab1718rec1").append(rec1);
+                            if (parseInt(value.Percent) >= 75)
+                                $("#lab1718count").append(count);
+                            else
+                                $("#lab1718count").append(rec3);
+                        }
+                        if (value.Slot == "P19-P20-") {
+                            $("#lab1920").append(lab1);
+                            $("#lab1920rec").append(rec);
+                            $("#lab1920rec1").append(rec1);
+                            if (parseInt(value.Percent) >= 75)
+                                $("#lab1920count").append(count);
+                            else
+                                $("#lab1920count").append(rec3);
+                        }
+                        if (value.Slot == "P21-P22-") {
+                            $("#lab2122").append(lab1);
+                            $("#lab2122rec").append(rec);
+                            $("#lab2122rec1").append(rec1);
+                            if (parseInt(value.Percent) >= 75)
+                                $("#lab2122count").append(count);
+                            else
+                                $("#lab2122count").append(rec3);
+                        }
+                        if (value.Slot == "P23-P24-") {
+                            $("#lab2324").append(lab1);
+                            $("#lab2324rec").append(rec);
+                            $("#lab2324rec1").append(rec1);
+                            if (parseInt(value.Percent) >= 75)
+                                $("#lab2324count").append(count);
+                            else
+                                $("#lab2324count").append(rec3);
+                        }
+                        if (value.Slot == "P37-P38-") {
+                            $("#lab3738").append(lab1);
+                            $("#lab3738rec").append(rec);
+                            $("#lab3738rec1").append(rec1);
+                            if (parseInt(value.Percent) >= 75)
+                                $("#lab3738count").append(count);
+                            else
+                                $("#lab3738count").append(rec3);
+                        }
+                        if (value.Slot == "P39-P40-") {
+                            $("#lab3940").append(lab1);
+                            $("#lab3940rec").append(rec);
+                            $("#lab3940rec1").append(rec1);
+                            if (parseInt(value.Percent) >= 75)
+                                $("#lab3940count").append(count);
+                            else
+                                $("#lab3940count").append(rec3);
+                        }
+                        if (value.Slot == "P41-P42-") {
+                            $("#lab4142").append(lab1);
+                            $("#lab4142rec").append(rec);
+                            $("#lab4142rec1").append(rec1);
+                            if (parseInt(value.Percent) >= 75)
+                                $("#lab4142count").append(count);
+                            else
+                                $("#lab4142count").append(rec3);
+                        }
+                        if (value.Slot == "P43-P44-") {
+                            $("#lab4344").append(lab1);
+                            $("#lab4344rec").append(rec);
+                            $("#lab4344rec1").append(rec1);
+                            if (parseInt(value.Percent) >= 75)
+                                $("#lab4344count").append(count);
+                            else
+                                $("#lab4344count").append(rec3);
+                        }
+                        if (value.Slot == "P7-P8-") {
+                            $("#lab78").append(lab1);
+                            $("#lab78rec").append(rec);
+                            $("#lab78rec1").append(rec1);
+                            if (parseInt(value.Percent) >= 75)
+                                $("#lab78count").append(count);
+                            else
+                                $("#lab78count").append(rec3);
+                        }
+                        if (value.Slot == "P9-P10-") {
+                            $("#lab910").append(lab1);
+                            $("#lab910rec").append(rec);
+                            $("#lab910rec1").append(rec1);
+                            if (parseInt(value.Percent) >= 75)
+                                $("#lab910count").append(count);
+                            else
+                                $("#lab910count").append(rec3);
+                        }
+                        if (value.Slot == "P11-P12-") {
+                            $("#lab1112").append(lab1);
+                            $("#lab1112rec").append(rec);
+                            $("#lab1112rec1").append(rec1);
+                            if (parseInt(value.Percent) >= 75)
+                                $("#lab1112count").append(count);
+                            else
+                                $("#lab1112count").append(rec3);
+                        }
+                        if (value.Slot == "P13-P14-") {
+                            $("#lab1314").append(lab1);
+                            $("#lab1314rec").append(rec);
+                            $("#lab1314rec1").append(rec1);
+                            if (parseInt(value.Percent) >= 75)
+                                $("#lab1314count").append(count);
+                            else
+                                $("#lab1314count").append(rec3);
+                        }
+                        if (value.Slot == "P27-P28-") {
+                            $("#lab2728").append(lab1);
+                            $("#lab2728rec").append(rec);
+                            $("#lab2728rec1").append(rec1);
+                            if (parseInt(value.Percent) >= 75)
+                                $("#lab2728count").append(count);
+                            else
+                                $("#lab2728count").append(rec3);
+                        }
+                        if (value.Slot == "P29-P30-") {
+                            $("#lab2930").append(lab1);
+                            $("#lab2930rec").append(rec);
+                            $("#lab2930rec1").append(rec1);
+                            if (parseInt(value.Percent) >= 75)
+                                $("#lab2930count").append(count);
+                            else
+                                $("#lab2930count").append(rec3);
+                        }
+                        if (value.Slot == "P31-P32-") {
+                            $("#lab3132").append(lab1);
+                            $("#lab3132rec").append(rec);
+                            $("#lab3132rec1").append(rec1);
+                            if (parseInt(value.Percent) >= 75)
+                                $("#lab3132count").append(count);
+                            else
+                                $("#lab3132count").append(rec3);
+                        }
+                        if (value.Slot == "P33-P34-") {
+                            $("#lab3334").append(lab1);
+                            $("#lab3334rec").append(rec);
+                            $("#lab3334rec1").append(rec1);
+                            if (parseInt(value.Percent) >= 75)
+                                $("#lab3334count").append(count);
+                            else
+                                $("#lab3334count").append(rec3);
+                        }
+                        if (value.Slot == "P47-P48-") {
+                            $("#lab4748").append(lab1);
+                            $("#lab4748rec").append(rec);
+                            $("#lab4748rec1").append(rec1);
+                            if (parseInt(value.Percent) >= 75)
+                                $("#lab4748count").append(count);
+                            else
+                                $("#lab4748count").append(rec3);
+                        }
+                        if (value.Slot == "P49-P50-") {
+                            $("#lab4950").append(lab1);
+                            $("#lab4950rec").append(rec);
+                            $("#lab4950rec1").append(rec1);
+                            if (parseInt(value.Percent) >= 75)
+                                $("#lab4950count").append(count);
+                            else
+                                $("#lab4950count").append(rec3);
+                        }
+
+                    });
+
+                }
+            });
+            insertbatch();
+
+        }
+    </script>
+    <script>
+        function insertbatch() {
+            $.ajax({
+                url: "../static/Data/json/DO_{{data}}.json",
+                dataType: "json",
+                success: function (data) {
+                    $(data).each(function (index, value) {
+                        var dayorder = value.DayOrder;
+                        var batch = value.Batch;
+                        $("#dayorder").append(dayorder);
+                        if (batch == "1") {
+                            $(".batch-2").hide();
+                        } else
+                            $(".batch-1").hide();
+                    });
+
+                }
+            });
+            insertatt();
+        }
+    </script>
+
+    <script>
+        function insertatt() {
+            $.ajax({
+                url: "../static/Data/json/CS_{{data}}.json",
+                dataType: "json",
+                success: function (data) {
+                    $(data).each(function (index, value) {
+                        var count = 0,
+                            i, h, a;
+                        h = parseInt(value.Hours);
+                        a = parseInt(value.Absent);
+                        for (i = 0; i < 10; i++) {
+                            if ((h + 1) - (a + 1) * 4 >= 0) {
+                                count++;
+                                h++;
+                                a++;
+                            }
+                        }
+                        var rec = value.Course_title + " ( " + value.Percent + " %) ";
+                        var rec1 = value.Absent + " out of " + value.Hours;
+                        var rec3 = value.Absent * 4 - value.Hours + " you need to attend";
+                        var count = count + " you can miss";
+                        if (value.Slot == "A") {
+                            $("#aa1").append(rec);
+                            $("#aa2").append(rec1);
+                            if (parseInt(value.Percent) >= 75)
+                                $("#aa3").append(count);
+                            else
+                                $("#aa3").append(rec3);
+                        }
+                        if (value.Slot == "B") {
+                            $("#ab1").append(rec);
+                            $("#ab2").append(rec1);
+                            if (parseInt(value.Percent) >= 75)
+                                $("#ab3").append(count);
+                            else
+                                $("#ab3").append(rec3);
+                        }
+                        if (value.Slot == "C") {
+                            $("#ac1").append(rec);
+                            $("#ac2").append(rec1);
+                            if (parseInt(value.Percent) >= 75)
+                                $("#ac3").append(count);
+                            else
+                                $("#ac3").append(rec3);
+                        }
+                        if (value.Slot == "D") {
+                            $("#ad1").append(rec);
+                            $("#ad2").append(rec1);
+                            if (parseInt(value.Percent) >= 75)
+                                $("#ad3").append(count);
+                            else
+                                $("#ad3").append(rec3);
+                        }
+                        if (value.Slot == "E") {
+                            $("#ae1").append(rec);
+                            $("#ae2").append(rec1);
+                            if (parseInt(value.Percent) >= 75)
+                                $("#ae3").append(count);
+                            else
+                                $("#ae3").append(rec3);
+                        }
+                        if (value.Slot == "F") {
+                            $("#af1").append(rec);
+                            $("#af2").append(rec1);
+                            if (parseInt(value.Percent) >= 75)
+                                $("#af3").append(count);
+                            else
+                                $("#af3").append(rec3);
+                        }
+                        if (value.Slot == "G") {
+                            $("#ag1").append(rec);
+                            $("#ag2").append(rec1);
+                            if (parseInt(value.Percent) >= 75)
+                                $("#ag3").append(count);
+                            else
+                                $("#ag3").append(rec3);
+                        }
+
+
+                    });
+
+                }
+            });
+
+        }
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $("#attendance").hide();
+
+            $("#attendancebutton").click(function () {
+                $("#timetable").hide();
+                $("#attendance").show();
+            });
+            $("#timetablebutton").click(function () {
+                $("#attendance").hide();
+                $("#timetable").show();
+            });
+        });
+    </script>
+    <script>
+        window.onscroll = function () {
+            myFunction()
+        };
+
+        var header = document.getElementById("myHeader");
+        var sticky = header.offsetTop;
+
+        function myFunction() {
+            if (window.pageYOffset > sticky) {
+                header.classList.add("sticky");
+            } else {
+                header.classList.remove("sticky");
+            }
+        }
+    </script>
+
+</body>
+
+</html>
