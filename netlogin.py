@@ -39,9 +39,10 @@ def getData():
     options.headless = True
     # browser = webdriver.Firefox(
     # options=options, executable_path=r'E:\New Project\Acadmia\Scrapsrm by Python\geckodriver.exe')
+    # driver = webdriver.Chrome(ChromeDriverManager().install())
     browser = webdriver.Chrome()
     # browser.implicitly_wait(30)
-    browser.get(('https://academia.srmuniv.ac.in/accounts/signin?_sh=false&hideidp=true&portal=10002227248&client_portal=true&servicename=ZohoCreator&service_language=en&serviceurl=https%3A%2F%2Facademia.srmuniv.ac.in%2F'))
+    browser.get(('https://academia.srmist.edu.in/accounts/signin?_sh=false&hideidp=true&portal=10002227248&client_portal=true&servicename=ZohoCreator&service_language=en&serviceurl=https%3A%2F%2Facademia.srmist.edu.in%2F'))
 
     username = browser.find_element_by_id('Email')
     username.clear()
@@ -91,7 +92,6 @@ def getData():
         slot.append(row)
 
     # marks = []
-
     # tables2 = soup.find(class_="cntdDiv").find_all_next('table')[2]
     # table_trs = tables2.find_all('tr')[2].find_next('td')
     # print(table_trs)
